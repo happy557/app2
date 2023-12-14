@@ -1,0 +1,18 @@
+<form method="POST">
+    {%csrf_token%}
+
+
+    {{todo_form}}
+
+    <button name="save">Sumbit</button>
+</form>
+
+<form method="POST">
+    {%csrf_token%}
+
+{%for i in todo%}
+
+<li>{{i.task}}<button>Edit</button><button></button></li>
+
+{%endfor%}
+</form>
